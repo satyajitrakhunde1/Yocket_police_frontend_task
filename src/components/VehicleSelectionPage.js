@@ -12,7 +12,7 @@ const VehicleSelectionPage = ({ copSelections, setCopSelections, availableCounts
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/vehicles')
+    axios.get('https://yocket-police-backend-task.onrender.com/vehicles')
       .then(response => setVehicles(response.data))
       .catch(error => console.error(error));
   }, []);

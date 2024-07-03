@@ -12,7 +12,7 @@ const CitySelectionPage = ({ copSelections, setCopSelections, resetVehicleCounts
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/cities')
+    axios.get('https://yocket-police-backend-task.onrender.com/cities')
       .then(response => setCities(response.data))
       .catch(error => console.error(error));
 

@@ -18,7 +18,7 @@ const ResultPage = ({ copSelections, resetVehicleCounts }) => {
   useEffect(() => {
     const fetchResult = async () => {
       try {
-        const response = await axios.post('http://localhost:5000/result', { copSelections });
+        const response = await axios.post('https://yocket-police-backend-task.onrender.com/result', { copSelections });
         setResult(response.data);
       } catch (error) {
         console.error('Error fetching result:', error);
