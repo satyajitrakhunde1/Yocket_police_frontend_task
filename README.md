@@ -15,7 +15,7 @@
     ```sh
     npm start
     ```
-    The frontend application will be available at `http://localhost:3000`. and `https://yocket-police-backend-task.onrender.com`
+    The frontend application will be available at `http://localhost:3000`. and `https://police-frontend.vercel.app/`
 
 ## Usage
 
