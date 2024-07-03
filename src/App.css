@@ -1,0 +1,167 @@
+/* General styles for the entire application */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fafafa;
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #b0b0b0;
+}
+
+p {
+  margin: 10px 0;
+  color: #cccccc;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input,
+select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #2c2c2c;
+  color: #fafafa;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Styles for CitySelectionPage */
+.CitySelectionPage {
+  margin-bottom: 40px;
+}
+
+.CitySelectionPage select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  margin-top: 5px;
+  background-color: #2c2c2c;
+  color: #fafafa;
+}
+
+.CitySelectionPage select:disabled {
+  background-color: #3a3a3a;
+  color: #666;
+}
+
+.CitySelectionPage .error-message {
+  color: #ff4c4c;
+  margin-top: 5px;
+}
+
+/* Styles for VehicleSelectionPage */
+.VehicleSelectionPage {
+  margin-bottom: 40px;
+}
+
+.VehicleSelectionPage select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  margin-top: 5px;
+  background-color: #2c2c2c;
+  color: #fafafa;
+}
+
+.VehicleSelectionPage select:disabled {
+  background-color: #3a3a3a;
+  color: #666;
+}
+
+.VehicleSelectionPage .error-message {
+  color: #ff4c4c;
+  margin-top: 5px;
+}
+
+/* Styles for ResultPage */
+.ResultPage {
+  text-align: center;
+}
+
+.ResultPage p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.ResultPage button {
+  margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+}
