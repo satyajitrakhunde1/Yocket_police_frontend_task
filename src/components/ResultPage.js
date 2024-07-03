@@ -53,7 +53,7 @@ const ResultPage = ({ copSelections, resetVehicleCounts }) => {
         result.captured ? (
           <div>
             <p style={{color:"greenyellow",display:"flex",justifyContent:"center",alignItems:"center"}}>{result.cop} successfully captured the fugitive!</p>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center',justifyContent:"center" }}>
               {renderCopImage(result.cop)}
              
               <img src={Chain} alt="Chain" style={{ maxWidth: '90px', margin: '10px' }} />
