@@ -18,6 +18,13 @@ const VehicleSelectionPage = ({ copSelections, setCopSelections, availableCounts
   }, []);
 
   const handleSubmit = async () => {
+    const selectedVehicleNames = Object.values(selectedVehicles);
+    
+    if (selectedVehicleNames.length < copSelections.length || selectedVehicleNames.includes('')) {
+      setValidationErrors({ general: 'Each cop must select a vehicle' });
+      return;
+    }
+
     const updatedSelections = copSelections.map((selection, index) => ({
       ...selection,
       vehicle: selectedVehicles[index]
@@ -43,12 +50,12 @@ const VehicleSelectionPage = ({ copSelections, setCopSelections, availableCounts
 
   return (
     <div>
-      <h2 style={{color:"royalblue",display:"flex",justifyContent:"center",alignItems:"center"}}>Select Vehicle for Each Cop</h2>
+      <h2 style={{color:"royalblue", display:"flex", justifyContent:"center", alignItems:"center"}}>Select Vehicle for Each Cop</h2>
       {copSelections && copSelections.length > 0 ? (
         copSelections.map((selection, index) => (
           <div key={index}>
             <h3>{selection.cop}</h3>
-            <p style={{color:"lightgreen",display:"flex",justifyContent:"center",alignItems:"center"}}>Selected City: {selection.city}</p>
+            <p style={{color:"lightgreen", display:"flex", justifyContent:"center", alignItems:"center"}}>Selected City: {selection.city}</p>
             <label style={{color:"royalblue"}}>Vehicle: </label>
             <select
               value={selectedVehicles[index] || ''}
@@ -71,6 +78,7 @@ const VehicleSelectionPage = ({ copSelections, setCopSelections, availableCounts
       ) : (
         <p>Loading cops...</p>
       )}
+      {validationErrors.general && <p style={{ color: 'red' }}>{validationErrors.general}</p>}
       <button onClick={handleSubmit}>See Results</button>
     </div>
   );
